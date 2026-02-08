@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FOOTER_DISCLAIMER, SITE_NAME } from "@/lib/constants";
+import EmailCapture from "@/components/EmailCapture";
 
 const footerLinks = {
   Services: [
@@ -40,9 +41,15 @@ export default function Footer() {
               Productized Reddit campaigns that control the conversations Google
               and AI rank for your brand.
             </p>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-500 text-xs mb-6">
               We accept USD, BTC, ETH, and USDT.
             </p>
+            <div>
+              <h3 className="font-bold text-sm text-gray-300 mb-2">
+                Get Reddit Marketing Tips
+              </h3>
+              <EmailCapture />
+            </div>
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (

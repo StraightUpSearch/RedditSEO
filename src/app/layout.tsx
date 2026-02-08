@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { getOrganizationSchema, getWebsiteSchema } from "@/lib/schema";
+import { GoogleAnalytics, MetaPixel } from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +46,8 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
+        <GoogleAnalytics />
+        <MetaPixel />
         <Header />
         <main>{children}</main>
         <Footer />
