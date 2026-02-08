@@ -3,7 +3,7 @@ import { SERVICE_FAQS } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import FinalCTA from "@/components/sections/FinalCTA";
-import { Clock, FileText, Shield, Plus } from "lucide-react";
+import { Clock, FileText, Shield, Plus, CreditCard, Bitcoin } from "lucide-react";
 
 interface ServicePageTemplateProps {
   pkg: ServicePackage;
@@ -22,13 +22,24 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-dark mb-4">
               {pkg.name}
             </h1>
-            <p className="text-xl text-gray-600 mb-8">{pkg.hook}</p>
+            <p className="text-xl text-gray-600 mb-6">{pkg.hook}</p>
+            <div className="flex items-baseline gap-3 mb-8">
+              <span className="text-4xl font-bold text-slate-dark">
+                {formatPrice(pkg.priceOneTime)}
+              </span>
+              <span className="text-gray-500">one-time</span>
+              {pkg.priceMonthly && (
+                <span className="text-sm text-gray-500">
+                  or {formatPrice(pkg.priceMonthly)}/mo
+                </span>
+              )}
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button href="/book-call" variant="primary" size="lg">
-                Book a Call First
+                Buy Now
               </Button>
-              <Button href="/services" variant="outline" size="lg">
-                Compare All Packages
+              <Button href="/book-call" variant="outline" size="lg">
+                Book a Call First
               </Button>
             </div>
           </div>
@@ -122,29 +133,36 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
                   )}
                 </div>
 
-                <p className="text-xs text-gray-500 mb-6">
-                  Also accept BTC, ETH, USDT
-                </p>
-
                 <Button
                   href="/book-call"
                   variant="primary"
                   size="lg"
                   className="w-full mb-3"
                 >
-                  Get Started
+                  Buy Now
                 </Button>
                 <Button
                   href="/book-call"
                   variant="outline"
                   size="md"
-                  className="w-full"
+                  className="w-full mb-4"
                 >
                   Book a Call First
                 </Button>
 
+                <div className="flex items-center gap-3 text-xs text-gray-500 mb-4 pt-2 border-t border-gray-100">
+                  <div className="flex items-center gap-1">
+                    <CreditCard className="w-3.5 h-3.5" />
+                    <span>Stripe</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Bitcoin className="w-3.5 h-3.5" />
+                    <span>BTC, ETH, USDT</span>
+                  </div>
+                </div>
+
                 {pkg.upsells.length > 0 && (
-                  <div className="mt-6 pt-6 border-t border-gray-200">
+                  <div className="pt-4 border-t border-gray-200">
                     <h4 className="text-sm font-bold text-slate-dark mb-3 flex items-center gap-2">
                       <Plus className="w-4 h-4" /> Add-Ons
                     </h4>

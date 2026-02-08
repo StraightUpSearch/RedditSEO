@@ -7,7 +7,7 @@ const pkg = PACKAGES[3];
 export const metadata: Metadata = {
   title: "Branded Subreddit Launch | Reddit Marketing Service",
   description:
-    "Own your corner of Reddit. Full subreddit setup, 10 launch posts, 40 supporting comments, moderation guide. Starting at $2,997.",
+    "Own your corner of Reddit. Full subreddit setup, 10 launch posts, 40 supporting comments, moderation guide. Starting at $4,500.",
 };
 
 export default function BrandedSubredditLaunchPage() {

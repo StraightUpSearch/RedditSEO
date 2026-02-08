@@ -11,7 +11,7 @@ const icons = [FileText, MessageSquare, ArrowUp, ArrowDown];
 export const metadata: Metadata = {
   title: "Reddit Units (A La Carte) | Reddit Marketing Service",
   description:
-    "Buy exactly what you need: Reddit posts at $75 each, comments at $25 each, upvotes at $1.50 each. Minimum order $150. Full reporting included.",
+    "Buy exactly what you need: Reddit posts at $120 each, comments at $40 each, upvote packs at $60. Minimum order $150. Full reporting included.",
 };
 
 export default function RedditUnitsPage() {

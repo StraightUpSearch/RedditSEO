@@ -18,8 +18,8 @@ export const PACKAGES: ServicePackage[] = [
     name: "Brand Signal Pack",
     slug: "brand-signal-pack",
     hook: "Get your first AI-readable brand mentions live in under 2 weeks.",
-    priceOneTime: 497,
-    priceMonthly: 397,
+    priceOneTime: 490,
+    priceMonthly: 390,
     idealClient:
       "New products, startups, local businesses establishing initial Reddit footprint",
     deliverables: [
@@ -41,8 +41,8 @@ export const PACKAGES: ServicePackage[] = [
     name: "Discussion Boost Pack",
     slug: "discussion-boost-pack",
     hook: "Spread your brand story across high-traffic Reddit conversations.",
-    priceOneTime: 997,
-    priceMonthly: 847,
+    priceOneTime: 1250,
+    priceMonthly: 1050,
     idealClient:
       "Growing DTC brands, SaaS in competitive niches, agencies needing white-label Reddit",
     deliverables: [
@@ -63,8 +63,8 @@ export const PACKAGES: ServicePackage[] = [
     name: "AI Visibility Campaign",
     slug: "ai-visibility-campaign",
     hook: "Be everywhere AI looks when someone searches your category.",
-    priceOneTime: 1997,
-    priceMonthly: 1697,
+    priceOneTime: 2400,
+    priceMonthly: 1997,
     idealClient:
       "Established brands scaling AI + organic search footprint, SaaS with multiple product lines",
     deliverables: [
@@ -86,7 +86,7 @@ export const PACKAGES: ServicePackage[] = [
     name: "Branded Subreddit Launch",
     slug: "branded-subreddit-launch",
     hook: "Own your corner of Reddit. Build a community that keeps giving.",
-    priceOneTime: 2997,
+    priceOneTime: 4500,
     idealClient:
       "Brands wanting a long-term owned community channel, SaaS with active user base",
     deliverables: [
@@ -108,25 +108,25 @@ export const REDDIT_UNITS: AlaCarteItem[] = [
   {
     name: "Reddit Posts",
     description: "Native Reddit posts placed in relevant subreddits",
-    pricePerUnit: 75,
+    pricePerUnit: 120,
     unit: "per post",
   },
   {
     name: "Reddit Comments",
     description: "Authentic comments in targeted threads",
-    pricePerUnit: 25,
+    pricePerUnit: 40,
     unit: "per comment",
   },
   {
-    name: "Upvotes",
+    name: "Upvote Packs",
     description: "Organic upvote amplification delivered gradually",
-    pricePerUnit: 1.5,
-    unit: "per upvote",
+    pricePerUnit: 60,
+    unit: "per pack",
   },
   {
     name: "Downvotes",
     description: "Strategic downvote placement for reputation management",
-    pricePerUnit: 2.0,
+    pricePerUnit: 4,
     unit: "per downvote",
   },
 ];
