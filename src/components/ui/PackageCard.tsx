@@ -13,11 +13,12 @@ function formatPrice(price: number): string {
 
 export default function PackageCard({ pkg, featured = false }: PackageCardProps) {
   return (
-    <div
-      className={`relative bg-white rounded-xl shadow-sm border p-6 flex flex-col transition-all hover:shadow-md ${
+    <Link
+      href={`/services/${pkg.slug}`}
+      className={`relative bg-white rounded-xl shadow-sm border p-6 flex flex-col transition-all hover:shadow-lg hover:-translate-y-1 group ${
         featured
           ? "border-reddit-orange ring-2 ring-reddit-orange/20 scale-[1.02]"
-          : "border-gray-200"
+          : "border-gray-200 hover:border-reddit-orange/30"
       }`}
     >
       {featured && (
@@ -58,24 +59,13 @@ export default function PackageCard({ pkg, featured = false }: PackageCardProps)
         <span className="bg-bg-light px-2 py-1 rounded">{pkg.executionTime}</span>
       </div>
 
-      <div className="space-y-2">
-        <Link
-          href={`/book-call?package=${pkg.slug}`}
-          className={`flex items-center justify-center gap-2 font-bold rounded-lg py-3 transition-all ${
-            featured
-              ? "bg-reddit-orange text-white hover:bg-orange-600"
-              : "bg-cta-green text-white hover:bg-green-600"
-          }`}
-        >
-          Get Started <ArrowRight className="w-4 h-4" />
-        </Link>
-        <Link
-          href={`/services/${pkg.slug}`}
-          className="flex items-center justify-center gap-1 text-sm text-gray-500 hover:text-slate-dark transition-colors py-2"
-        >
-          View full details
-        </Link>
+      <div className={`flex items-center justify-center gap-2 font-bold rounded-lg py-3 transition-all ${
+        featured
+          ? "bg-reddit-orange text-white group-hover:bg-orange-600"
+          : "bg-cta-green text-white group-hover:bg-green-600"
+      }`}>
+        Get Started <ArrowRight className="w-4 h-4" />
       </div>
-    </div>
+    </Link>
   );
 }

@@ -211,24 +211,24 @@ export const SERVICE_FAQS: FAQ[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Within three weeks, our brand was showing up in Reddit threads that rank on the first page of Google. The ROI on this is unlike anything else we have tried.",
+      "Within three weeks, our brand was cited in a Reddit thread ranking on page one for 'best collagen supplements.' We tracked a 23% lift in branded search volume the following month. Nothing else we tried moved the needle like this.",
     name: "Sarah Chen",
     title: "Head of Growth",
-    company: "A DTC Skincare Brand",
+    company: "DTC Supplements Brand",
   },
   {
     quote:
-      "We needed Reddit mentions to influence AI search results. The Reddit SEO delivered exactly that, with full transparency on every placement.",
+      "We needed to show up in AI generated answers for our product category. After one AI Visibility Campaign, our brand appeared in ChatGPT responses for 3 of our top 5 target queries. The team delivered 25 placements across 18 subreddits, all documented with live URLs.",
     name: "Marcus Rivera",
     title: "VP of Marketing",
-    company: "A B2B SaaS Company",
+    company: "B2B SaaS Platform",
   },
   {
     quote:
-      "The reporting alone is worth it. Every URL, every upvote count, every thread. We know exactly what we are getting and the results speak for themselves.",
+      "We spent $12,000 on influencer campaigns with zero measurable SEO impact. One Discussion Boost Pack for $1,250 got us mentioned in 10 active Reddit threads, 4 of which now rank on page one of Google. The transparency report made it easy to prove ROI to our board.",
     name: "Jessica Okonkwo",
-    title: "Founder",
-    company: "An Ecommerce Brand",
+    title: "Founder and CEO",
+    company: "Ecommerce Fashion Brand",
   },
 ];
 

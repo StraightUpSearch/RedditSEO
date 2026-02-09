@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { getOrganizationSchema, getWebsiteSchema } from "@/lib/schema";
 import { GoogleAnalytics, MetaPixel } from "@/components/Analytics";
+import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
   title: {
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingCTA />
       </body>
     </html>
   );

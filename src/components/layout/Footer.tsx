@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FOOTER_DISCLAIMER, SITE_NAME } from "@/lib/constants";
 import EmailCapture from "@/components/EmailCapture";
+import { Linkedin, Twitter } from "lucide-react";
 
 const footerLinks = {
   Services: [
@@ -41,9 +42,32 @@ export default function Footer() {
               Productized Reddit campaigns that control the conversations Google
               and AI rank for your brand.
             </p>
-            <p className="text-gray-500 text-xs mb-6">
+            <p className="text-gray-500 text-xs mb-4">
               We accept USD, BTC, ETH, and USDT.
             </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3 mb-6">
+              <a
+                href="https://www.linkedin.com/company/straight-up-search/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 text-gray-300" />
+              </a>
+              <a
+                href="https://x.com/straightupsrch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="X (Twitter)"
+              >
+                <Twitter className="w-4 h-4 text-gray-300" />
+              </a>
+            </div>
+
             <div>
               <h3 className="font-bold text-sm text-gray-300 mb-2">
                 Get Reddit Marketing Tips
@@ -80,7 +104,16 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-xs">
               &copy; {new Date().getFullYear()} {SITE_NAME}. All Rights
-              Reserved.
+              Reserved. A{" "}
+              <a
+                href="https://straightupsearch.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Straight Up Search
+              </a>{" "}
+              brand.
             </p>
             <p className="text-gray-600 text-xs">
               {SITE_NAME} is not affiliated with or endorsed by Reddit. Reddit
