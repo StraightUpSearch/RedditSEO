@@ -17,17 +17,21 @@ export default function HowItWorks() {
           {PROCESS_STEPS.map((step, i) => {
             const Icon = icons[i];
             return (
-              <div key={step.number} className="text-center">
-                <div className="w-16 h-16 bg-reddit-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-reddit-orange" />
+              <div key={step.number} className="relative text-center">
+                {/* Connector line (hidden on mobile) */}
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-[2px] bg-gray-200" />
+                )}
+                <div className="relative w-16 h-16 bg-white border-2 border-reddit-orange/20 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
+                  <Icon className="w-7 h-7 text-reddit-orange" />
+                  <span className="absolute -top-2 -right-2 w-6 h-6 bg-reddit-orange text-white text-xs font-bold rounded-full flex items-center justify-center">
+                    {step.number}
+                  </span>
                 </div>
-                <div className="text-sm font-bold text-reddit-orange mb-2">
-                  Step {step.number}
-                </div>
-                <h3 className="text-xl font-bold text-slate-dark mb-3">
+                <h3 className="text-lg font-bold text-slate-dark mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">
                   {step.description}
                 </p>
               </div>
