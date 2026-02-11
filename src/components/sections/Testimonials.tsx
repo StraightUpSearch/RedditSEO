@@ -1,6 +1,6 @@
 import { TESTIMONIALS } from "@/lib/constants";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Star } from "lucide-react";
+import { Star, TrendingUp } from "lucide-react";
 
 export default function Testimonials() {
   return (
@@ -15,19 +15,29 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t, i) => (
             <div
               key={i}
-              className="bg-bg-light rounded-xl p-8 border border-gray-100 hover:border-reddit-orange/10 transition-colors"
+              className="bg-white rounded-xl p-8 border border-gray-200 hover:border-reddit-orange/30 hover:shadow-lg transition-all"
             >
+              {/* Result badge */}
+              {t.result && (
+                <div className="inline-flex items-center gap-1.5 bg-cta-green/10 text-cta-green text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+                  <TrendingUp className="w-3 h-3" />
+                  {t.result}
+                </div>
+              )}
+
               <div className="flex gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star} className="w-4 h-4 fill-reddit-orange text-reddit-orange" />
                 ))}
               </div>
+
               <p className="text-gray-700 text-sm leading-relaxed mb-6">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-reddit-orange/10 rounded-full flex items-center justify-center">
-                  <span className="text-reddit-orange font-bold text-sm">
+
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div className="w-11 h-11 bg-slate-dark rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">
                     {t.name.charAt(0)}
                   </span>
                 </div>

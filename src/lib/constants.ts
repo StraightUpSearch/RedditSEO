@@ -134,21 +134,27 @@ export const REDDIT_UNITS: AlaCarteItem[] = [
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: 1,
-    title: "Tell Us Your Goals",
+    title: "Connect Your Brand",
     description:
-      "Share your target subreddits, keywords, competitors, and brand guidelines. Our onboarding form makes it simple to give us everything we need.",
+      "Share your keywords, brand names, competitors, and target subreddits. Our onboarding form makes it simple to give us everything we need in minutes.",
   },
   {
     number: 2,
-    title: "We Research and Create",
+    title: "We Research Opportunities",
     description:
-      "We map the best subreddits, draft authentic content, and get your approval before anything goes live. Every post is crafted to fit the community.",
+      "We map the highest-value subreddits for your niche, identify active threads, and plan placements designed to influence search and AI visibility.",
   },
   {
     number: 3,
-    title: "Live Placements and Report",
+    title: "You Approve, We Deploy",
     description:
-      "Your content goes live across Reddit. You get a full transparency report with live URLs, engagement stats, and performance insights.",
+      "Every piece of content is drafted for your review before posting. You approve it, we place it in the right communities at the right time.",
+  },
+  {
+    number: 4,
+    title: "Track Results and Scale",
+    description:
+      "Get a full transparency report with live URLs, engagement stats, and performance insights. See what is working and scale up with confidence.",
   },
 ];
 
@@ -215,6 +221,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Sarah Chen",
     title: "Head of Growth",
     company: "A DTC Skincare Brand",
+    result: "Page 1 rankings in 3 weeks",
   },
   {
     quote:
@@ -222,6 +229,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Marcus Rivera",
     title: "VP of Marketing",
     company: "A B2B SaaS Company",
+    result: "Brand cited in AI Overviews within 45 days",
   },
   {
     quote:
@@ -229,6 +237,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Jessica Okonkwo",
     title: "Founder",
     company: "An Ecommerce Brand",
+    result: "14,000+ organic views from Reddit threads",
   },
 ];
 

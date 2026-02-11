@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 
 export default function PackagesPreview() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-bg-light py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Pick Your Package"
@@ -18,13 +18,21 @@ export default function PackagesPreview() {
           ))}
         </div>
 
-        <div className="text-center">
-          <p className="text-gray-600 mb-4">
-            Need something specific? Buy individual posts, comments, or upvotes.
+        <div className="text-center bg-white rounded-xl p-8 border border-gray-200 max-w-2xl mx-auto">
+          <p className="text-slate-dark font-bold text-lg mb-2">
+            Need something specific?
           </p>
-          <Button href="/services/reddit-units" variant="outline" size="md">
-            View Reddit Units (A La Carte)
-          </Button>
+          <p className="text-gray-600 mb-4 text-sm">
+            Buy individual posts, comments, or upvotes. Minimum order $150.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button href="/services/reddit-units" variant="outline" size="md">
+              View Reddit Units (A La Carte)
+            </Button>
+            <Button href="/custom-plan" variant="secondary" size="md">
+              Get a Custom Quote
+            </Button>
+          </div>
         </div>
       </div>
     </section>
