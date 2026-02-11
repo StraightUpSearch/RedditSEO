@@ -26,17 +26,17 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
                 <Clock className="w-4 h-4" />
                 {pkg.executionTime}
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-[1.1] tracking-tight">
                 {pkg.name}
               </h1>
               <p className="text-lg text-gray-300 mb-8">{pkg.hook}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  href={`/book-call?package=${pkg.slug}`}
-                  variant="primary"
+                  href={`/book-call?package=${pkg.slug}&intent=purchase`}
+                  variant="secondary"
                   size="lg"
                 >
-                  Get Started <ArrowRight className="w-4 h-4 ml-2" />
+                  Buy Now <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Button
                   href="/book-call"
@@ -56,7 +56,7 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
                   <span className="text-5xl font-bold text-slate-dark">
                     {formatPrice(pkg.priceOneTime)}
                   </span>
-                  <span className="text-gray-500">one-time</span>
+                  <span className="text-gray-500 text-sm">one-time</span>
                 </div>
                 {pkg.priceMonthly && (
                   <p className="text-gray-500 text-sm mt-2">
@@ -66,12 +66,12 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
               </div>
 
               <Button
-                href={`/book-call?package=${pkg.slug}`}
-                variant="primary"
+                href={`/book-call?package=${pkg.slug}&intent=purchase`}
+                variant="secondary"
                 size="lg"
                 className="w-full mb-3"
               >
-                Get Started Now
+                Buy Now <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
                 href="/book-call"
@@ -79,7 +79,7 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
                 size="md"
                 className="w-full mb-6"
               >
-                Talk to Us First
+                Book a Free Call First
               </Button>
 
               <div className="flex items-center justify-center gap-4 text-xs text-gray-400 mb-6 pt-4 border-t border-gray-100">
@@ -183,12 +183,12 @@ export default function ServicePageTemplate({ pkg }: ServicePageTemplateProps) {
                 </div>
 
                 <Button
-                  href={`/book-call?package=${pkg.slug}`}
-                  variant="primary"
+                  href={`/book-call?package=${pkg.slug}&intent=purchase`}
+                  variant="secondary"
                   size="lg"
                   className="w-full mb-3"
                 >
-                  Get Started
+                  Buy Now
                 </Button>
                 <Button
                   href="/book-call"

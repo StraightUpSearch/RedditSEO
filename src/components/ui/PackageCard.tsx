@@ -32,15 +32,15 @@ export default function PackageCard({ pkg, featured = false }: PackageCardProps)
       <p className="text-gray-500 text-sm mb-4 leading-relaxed">{pkg.hook}</p>
 
       <div className="mb-6">
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-baseline gap-1.5">
           <span className="text-3xl font-bold text-slate-dark">
             {formatPrice(pkg.priceOneTime)}
           </span>
-          <span className="text-gray-400 text-sm">one-time</span>
+          <span className="text-gray-400 text-sm ml-1">one-time</span>
         </div>
         {pkg.priceMonthly && (
-          <p className="text-sm text-gray-400 mt-1">
-            or {formatPrice(pkg.priceMonthly)}/mo
+          <p className="text-sm text-gray-400 mt-1.5">
+            or {formatPrice(pkg.priceMonthly)}/mo recurring
           </p>
         )}
       </div>
@@ -55,19 +55,19 @@ export default function PackageCard({ pkg, featured = false }: PackageCardProps)
       </ul>
 
       <div className="flex items-center gap-2 text-xs text-gray-400 mb-4">
-        <span className="bg-bg-light px-2 py-1 rounded">{pkg.executionTime}</span>
+        <span className="bg-bg-light px-2.5 py-1 rounded">{pkg.executionTime}</span>
       </div>
 
       <div className="space-y-2">
         <Link
-          href={`/book-call?package=${pkg.slug}`}
+          href={`/book-call?package=${pkg.slug}&intent=purchase`}
           className={`flex items-center justify-center gap-2 font-bold rounded-lg py-3 transition-all ${
             featured
               ? "bg-reddit-orange text-white hover:bg-orange-600"
               : "bg-cta-green text-white hover:bg-green-600"
           }`}
         >
-          Get Started <ArrowRight className="w-4 h-4" />
+          Buy Now <ArrowRight className="w-4 h-4" />
         </Link>
         <Link
           href={`/services/${pkg.slug}`}
