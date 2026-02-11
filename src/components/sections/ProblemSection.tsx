@@ -1,30 +1,39 @@
-import { Search, Bot, Users } from "lucide-react";
+import { Search, Bot, Users, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const problems = [
+const features = [
   {
     icon: Search,
     title: "Google Ranks Reddit",
     stat: "62%",
     statLabel: "of buyer-intent queries show Reddit",
-    description:
-      'Reddit threads appear in organic search results, especially for "best X," "X vs Y," and "is X legit" queries. Google\'s Discussions tab highlights Reddit for buyer-intent searches.',
+    benefits: [
+      "Reddit threads appear in organic SERPs for \"best X\" and \"X vs Y\" queries",
+      "Google's Discussions tab highlights Reddit for purchase research",
+      "Helpful Reddit content can rank page 1, even for competitive terms",
+    ],
   },
   {
     icon: Bot,
     title: "AI Trains on Reddit",
     stat: "$60M",
     statLabel: "Google paid for Reddit data",
-    description:
-      "Google licenses Reddit data for AI Overviews. ChatGPT, Gemini, and Perplexity all ingest Reddit content. Brand mentions in Reddit threads feed directly into AI generated answers.",
+    benefits: [
+      "Google licenses Reddit data for AI Overviews",
+      "ChatGPT, Gemini, and Perplexity ingest Reddit content",
+      "Brand mentions become training data for AI answers",
+    ],
   },
   {
     icon: Users,
     title: "Buyers Trust Reddit",
     stat: "64%",
     statLabel: "prefer brands seen on communities",
-    description:
-      "Reddit recommendations outperform ads for purchase intent. Peer advice in threads converts better than branded content. Authentic Reddit presence builds lasting trust.",
+    benefits: [
+      "Reddit recommendations outperform ads for purchase intent",
+      "Peer advice in threads converts better than branded content",
+      "Authentic Reddit presence builds lasting trust signals",
+    ],
   },
 ];
 
@@ -38,24 +47,36 @@ export default function ProblemSection() {
         />
 
         <div className="grid md:grid-cols-3 gap-6">
-          {problems.map((item) => (
+          {features.map((item) => (
             <div
               key={item.title}
-              className="bg-bg-light rounded-xl p-8 border border-gray-100 hover:border-reddit-orange/20 transition-colors"
+              className="bg-white rounded-xl p-8 border border-gray-200 hover:border-reddit-orange/30 hover:shadow-lg transition-all group"
             >
-              <div className="w-12 h-12 bg-reddit-orange/10 rounded-xl flex items-center justify-center mb-5">
-                <item.icon className="w-6 h-6 text-reddit-orange" />
+              {/* Icon + Stat header */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-14 h-14 bg-reddit-orange/10 rounded-xl flex items-center justify-center group-hover:bg-reddit-orange/20 transition-colors">
+                  <item.icon className="w-7 h-7 text-reddit-orange" />
+                </div>
+                <div className="text-right">
+                  <span className="text-3xl font-bold text-slate-dark">{item.stat}</span>
+                  <p className="text-xs text-gray-500 mt-0.5">{item.statLabel}</p>
+                </div>
               </div>
-              <div className="mb-4">
-                <span className="text-3xl font-bold text-slate-dark">{item.stat}</span>
-                <p className="text-xs text-gray-500 mt-1">{item.statLabel}</p>
-              </div>
-              <h3 className="text-lg font-bold text-slate-dark mb-3">
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-slate-dark mb-4">
                 {item.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {item.description}
-              </p>
+
+              {/* Benefits list */}
+              <ul className="space-y-3">
+                {item.benefits.map((benefit, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-gray-600 leading-relaxed">
+                    <ArrowRight className="w-3.5 h-3.5 text-reddit-orange mt-1 shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

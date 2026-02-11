@@ -29,6 +29,7 @@ export interface Testimonial {
   name: string;
   title: string;
   company: string;
+  result?: string;
 }
 
 export interface ProcessStep {
